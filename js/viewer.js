@@ -50,7 +50,10 @@ const player = new WGo.BasicPlayer(document.getElementById('container'), {
 
 $.get('sgf/games.json', function(data) {
     positionInfos = data;
-    getAndDrawSgf(1);
+    const match = location.search.match(/position=([0-9]+)/);
+    const number = match ? parseInt(match[1]) : 1;
+    $('#position').val(number);
+    getAndDrawSgf(number);
     if (innerWidth < 650) {
         setTimeout(function() {
             // モバイルのレイアウトでCommmentsの文字がはみ出るので消している。
