@@ -1,0 +1,82 @@
+/* Copyright 2018 ICHIKAWA, Yuji */
+
+#main-control button {
+    -webkit-appearance: none;
+    min-width: 44px;
+    min-height: 44px;
+}
+
+#main-control input {
+    -webkit-appearance: none;
+    min-height: 44px;
+    border: none;
+}
+
+#main-control button {
+    width: auto;
+}
+
+#title, #turn, #main-control {
+    text-align: center;
+}
+
+#main-control > div {
+    display: flex;
+    align-items: center;
+}
+
+#main-control > div > label {
+    order: 1;
+    width: 12em;
+    padding-right: 0.5em;
+    text-align: right;
+}
+
+@media screen and (min-width: 650px) {
+    #main-control > div > label {
+        width: 15em;
+    }
+}
+
+#main-control > div > input, #main-control > div > div, #main-control > div > button {
+    order: 2;
+}
+
+#player {
+    width: 11em;
+}
+
+#position {
+    width: 4em;
+    text-align: right;
+}
+
+/* WGo */
+
+input {
+    padding: 1px; /* iOS SafariのデフォルトがChromeと違う */
+}
+
+.wgo-player-top .wgo-comments-wrapper, .wgo-player-bottom .wgo-comments-wrapper {
+    height: 4em;
+}
+
+.wgo-440 .wgo-button-multiprev, .wgo-440 .wgo-button-multinext {
+    display: inline-block;
+}
+
+.wgo-ctrlgroup-left, .wgo-ctrlgroup-right {
+    display: none;
+}
+
+.wgo-commentbox .wgo-info-title {
+    display: none;
+}
+
+.wgo-commentbox .wgo-info-label {
+    display: none;
+}
+
+.wgo-button-multinext::before {
+    margin-left: -5px; /* bugfix的な */
+}

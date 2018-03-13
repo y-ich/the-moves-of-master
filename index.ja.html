@@ -1,0 +1,38 @@
+<!-- Copyright 2018 ICHIKAWA, Yuji -->
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,user-scalable=no">
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="wgo/wgo.min.js"></script>
+    <script type="text/javascript" src="wgo/wgo.player.min.js"></script>
+    <link type="text/css" href="wgo/wgo.player.css" rel="stylesheet" />
+    <link rel="stylesheet" href="css/layout.css">
+</head>
+<body>
+    <h1 id="title">Masterこの一手</h1>
+    <p>AlphaGo Teachの棋譜からプロ棋士の一手とは異なるMasterならでは一手が出る局面を集めました。</p>
+    <p>アルファベットはプロ棋士の一手です。(コメント欄の勝率はコミ7目半での勝率です。)</p>
+    <p>▶をクリックするとMasterの一手を見ることができます。「次へ」ボタンをクリックすると次の局面を見ることができます。</p>
+    <h2 id="turn"></h2>
+    <div id="container"></div>
+    <form id="main-control">
+        <div>
+            <div>
+                <input id="position" type="number" name="position" value="1" min="1" max="7188">
+                <button type="button" id="back" class="wgo-button">戻る</button>
+                <button type="button" id="next" class="wgo-button">次へ</button>
+            </div>
+            <label id="explain-position" for="position">局面番号</label>
+        </div>
+        <div>
+            <input id="player" name="player" type="text" placeholder="棋士名+エンターキー">
+            <label id="explain-player" for="player">棋士名で絞り込み</label>
+        </div>
+    </form>
+    <script src="js/jssgf.js"></script>
+    <script src="js/ja.js"></script>
+    <script src="js/viewer.js"></script>
+</body>
+</html>

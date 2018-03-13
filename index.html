@@ -1,0 +1,38 @@
+<!-- Copyright 2018 ICHIKAWA, Yuji -->
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,user-scalable=no">
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="wgo/wgo.min.js"></script>
+    <script type="text/javascript" src="wgo/wgo.player.min.js"></script>
+    <link type="text/css" href="wgo/wgo.player.css" rel="stylesheet" />
+    <link rel="stylesheet" href="css/layout.css">
+</head>
+<body>
+    <h1 id="title">The Moves of Master</h1>
+    <p>Positions that Master plays her unique move are gathered from AlphaGo Teach.</p>
+    <p>Alphabet labels are Professional players' moves. (Winrates in comments assume 7.5 komi.)</p>
+    <p>Click ▶ to see Master's move. Click 'Next' button to see next position.</p>
+    <h2 id="turn"></h2>
+    <div id="container"></div>
+    <form id="main-control">
+        <div>
+            <div>
+                <input id="position" type="number" name="position" value="1" min="1" max="7188">
+                <button type="button" id="back" class="wgo-button">Back</button>
+                <button type="button" id="next" class="wgo-button">Next</button>
+            </div>
+            <label id="explain-position" for="position">Position No.</label>
+        </div>
+        <div>
+            <input id="player" name="player" type="text" placeholder="Player's name and Enter key">
+            <label id="explain-player" for="player">Narrows by player's name</label>
+        </div>
+    </form>
+    <script src="js/jssgf.js"></script>
+    <script src="js/en.js"></script>
+    <script src="js/viewer.js"></script>
+</body>
+</html>
