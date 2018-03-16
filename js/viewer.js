@@ -116,7 +116,6 @@ $('#player').on('change', function(event) {
             const color = e.moveNumber % 2 === 0 ? 'black' : 'white';
             return e.games.some(e => e[color] === name);
         });
-        selected.sort((a, b) => b.moveNumber - a.moveNumber);
         if (selected.length === 0) {
             alert('no record');
             selected = null;
