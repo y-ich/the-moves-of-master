@@ -113,11 +113,8 @@ $('#player').on('change', function(event) {
     const name = $(event.currentTarget).val();
     if (name) {
         selected = positionInfos.filter(e => {
-            if (e.moveNumber % 2 === 0) {
-                return e.games.some(e => e.black === name);
-            } else {
-                e.games.some(e => e.white === name);
-            }
+            const color = e.moveNumber % 2 === 0 ? 'black' : 'white';
+            return e.games.some(e => e[color] === name);
         });
         selected.sort((a, b) => b.moveNumber - a.moveNumber);
         if (selected.length === 0) {
